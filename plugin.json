@@ -1,22 +1,22 @@
 {
-  "uuid": "70606b50-137b-45c3-8688-545398dc85a0",
-  "id": "search_via_perplexity",
+  "uuid": "f64ae2a6-8337-4b28-934f-330536e601f9",
+  "id": "search_via_perplexity_openrouter",
   "iconURL": "https://custom.typingmind.com/assets/models/perplexityai.png",
   "emoji": "🔍",
-  "title": "Perplexity Search",
+  "title": "Perplexity Search with OpenRouter",
   "userSettings": [
     {
       "name": "apiKey",
-      "label": "Perplexity API Key",
+      "label": "OpenRouter API Key",
       "type": "password",
       "required": true,
-      "description": "Get your API Key from Perplexity: https://www.perplexity.ai/settings/api"
+      "description": "Get your API Key from OpenRouter: https://openrouter.ai/settings/keys"
     },
     {
       "name": "model",
       "label": "Model",
-      "description": "Optional, default: \"sonar\"",
-      "defaultValue": "sonar"
+      "description": "Optional, default: \"perplexity/llama-3.1-sonar-small-128k-online\"",
+      "defaultValue": "perplexity/llama-3.1-sonar-small-128k-online"
     },
     {
       "name": "systemMessage",
@@ -26,7 +26,7 @@
     }
   ],
   "openaiSpec": {
-    "name": "search_via_perplexity",
+    "name": "search_via_perplexity_openrouter",
     "description": "Search for information from the internet using Perplexity.",
     "parameters": {
       "type": "object",
@@ -40,10 +40,10 @@
     }
   },
   "httpAction": {
-    "id": "b156833f-9599-4155-bba9-e713dd21aa01",
+    "id": "cf78f68a-e5da-41b0-b0fb-bec7e17573dc",
     "method": "POST",
     "name": "",
-    "url": "https://api.perplexity.ai/chat/completions",
+    "url": "https://openrouter.ai/api/v1/chat/completions",
     "requestBody": "{\"model\": \"{model}\",\"messages\": [{\"role\": \"system\",\"content\": \"{systemMessage}\"},{\"role\": \"user\",\"content\": \"{keyword}\"}]}",
     "requestHeaders": "{\"accept\": \"application/json\",\"authorization\": \"Bearer {apiKey}\"}",
     "resultTransform": {

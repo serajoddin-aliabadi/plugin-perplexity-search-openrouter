@@ -1,6 +1,6 @@
-This plugin allows the AI assistant to search for information from the internet using Perplexity.
+This plugin allows the AI assistant to search for information from the internet using Perplexity with OpenRouter API.
 
-**🔑 Perplexity API Key needed**. Click the Settings tab and enter your API Key. Get your Perplexity API Key from [here](https://www.perplexity.ai/settings/api)
+**🔑 OpenRouter API Key needed**. Click the Settings tab and enter your API Key. Get your OpenRouter API Key from [here](https://openrouter.ai/settings/keys)
 
 Example usage:
 

@@ -1,16 +1,16 @@
-function search_via_perplexity(params, userSettings) {
+function search_via_perplexity_openrouter(params, userSettings) {
   const keyword = params.keyword;
-  const model = userSettings.model || 'sonar';
+  const model = userSettings.model || 'perplexity/llama-3.1-sonar-small-128k-online';
   const systemMessage = userSettings.systemMessage || 'Be precise and concise.';
   const key = userSettings.apiKey;
 
   if (!key) {
     throw new Error(
-      'Please set the Perplexity API Key in the plugin settings.'
+      'Please set the OpenRouter API Key in the plugin settings.'
     );
   }
 
-  return fetch('https://api.perplexity.ai/chat/completions', {
+  return fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',

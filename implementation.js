@@ -1,6 +1,6 @@
 function search_via_perplexity_openrouter(params, userSettings) {
   const keyword = params.keyword;
-  const model = userSettings.model || 'perplexity/llama-3.1-sonar-small-128k-online';
+  const model = userSettings.model || 'perplexity/sonar';
   const systemMessage = userSettings.systemMessage || 'Be precise and concise.';
   const key = userSettings.apiKey;
 
